@@ -1,16 +1,19 @@
-import PropsConcept from './Component/PropsConcept.jsx';
+import PropsConcept from "./Component/PropsConcept.jsx";
 //import DynamicAttributeConcept from './DynamicAttributeConcept.jsx';
-import { employeeList } from './assets/employeeData.js';
-
+import { employeeList } from "./assets/employeeData.js";
+import TabButton from "./Component/TabButton.jsx";
 
 function App() {
   return (
     <div>
-      <PropsConcept empList= {employeeList[0]} />
+      <div>
+        <TabButton>Component</TabButton>
+      </div>
+      <PropsConcept empList={employeeList[0]} />
       <PropsConcept empList={employeeList[1]} />
-      <PropsConcept empList = {employeeList[2]} />
+      <PropsConcept empList={employeeList[2]} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
