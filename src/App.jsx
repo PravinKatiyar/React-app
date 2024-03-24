@@ -1,28 +1,15 @@
-import reactImg from './assets/images.png';
+import PropsConcept from './Component/PropsConcept.jsx';
+//import DynamicAttributeConcept from './DynamicAttributeConcept.jsx';
+import { employeeList } from './assets/employeeData.js';
 
-const getRandomWords =['React', 'Fundamentals','Frontend']
-function getRandom(max){
-  return Math.floor(Math.random() * (max+ 1));
-}
-
-
-export function Header() {
- const desc = getRandomWords[getRandom(2)]
-  return(
-    <div>
-    <h3>This is an Heading</h3>
-    <p>Random Generated value is: {desc}</p>
-    </div>
-  );
-}
 
 function App() {
   return (
     <div>
-      <Header/>
-      <p>Hello Developer</p>
-      <img src ={reactImg}/>
-      </div>
+      <PropsConcept empList= {employeeList[0]} />
+      <PropsConcept empList={employeeList[1]} />
+      <PropsConcept empList = {employeeList[2]} />
+    </div>
   )
 }
 
