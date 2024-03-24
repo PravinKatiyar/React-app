@@ -1,7 +1,12 @@
-export default function TabButton(props) {
+import "./Tabutton.css";
+
+export default function TabButton({children, onSelect}) {
+//   function handleClick() {
+//     alert("Button is Clicked");
+//   }
   return (
-    <button>
-      <p> {props.children}</p>
+    <button className="button" onClick={onSelect}>
+      {children}
     </button>
   );
 }
