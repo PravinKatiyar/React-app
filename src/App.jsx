@@ -2,24 +2,35 @@ import PropsConcept from "./Component/PropsConcept.jsx";
 //import DynamicAttributeConcept from './DynamicAttributeConcept.jsx';
 import { employeeList } from "./assets/employeeData.js";
 import TabButton from "./Component/TabButton.jsx";
+import { reactTopics } from "./assets/reactTopics.js";
+import { useState } from "react";
 
 function App() {
-
-  function handleSelect(selectedButton){
-    alert('Button is Clicked!!  '+selectedButton)
+  const [selectedTopic, setSelectedTopic] = useState();
+  function handleSelect(selectedButton) {
+    setSelectedTopic(selectedButton);
+    console.log(selectedTopic);
+    //  alert('Button is Clicked!!  ' + selectedButton)
   }
-
 
   return (
     <div>
       <div>
         <menu>
-          <TabButton onSelect={() => handleSelect("Component")}>Component</TabButton>
-          <TabButton onSelect={() => handleSelect("State")}>State</TabButton>
-          <TabButton onSelect={() => handleSelect("React")}>React</TabButton>
-          <TabButton onSelect={() => handleSelect("Event")}>Event</TabButton>
+          <TabButton onSelect={() => handleSelect("Components")}>
+            Components
+          </TabButton>
+          <TabButton onSelect={() => handleSelect("Props")}>Props</TabButton>
+          <TabButton onSelect={() => handleSelect("Router")}>Router</TabButton>
+          <TabButton onSelect={() => handleSelect("Hooks")}>Hooks</TabButton>
         </menu>
-        <article></article>
+        {!selectedTopic ? <p>Please select a topic</p> : null}
+        {selectedTopic ? (
+          <article>
+            <h2>{reactTopics[selectedTopic].title}</h2>
+            <h3>{reactTopics[selectedTopic].description}</h3>
+          </article>
+        ) : null}
       </div>
       {/* <PropsConcept empList={employeeList[0]} />
       <PropsConcept empList={employeeList[1]} />
