@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-function PropsConcept({ name, Role, Company }) {
+export function PropsConcept({ name, Role, Company }) {
   //    const { name, Role, Company } = empList;
   return (
     <div className="card">

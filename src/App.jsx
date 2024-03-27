@@ -1,6 +1,7 @@
 import PropsConcept from "./Component/PropsConcept.jsx";
+import PropsConcept2 from "./Component/PropsConcept2.jsx";
 //import DynamicAttributeConcept from './DynamicAttributeConcept.jsx';
-import { employeeList } from "./assets/employeeData.js";
+import { EMP_LIST, TODO_TOPICS } from "./assets/employeeData.js";
 import TabButton from "./Component/TabButton.jsx";
 import { reactTopics } from "./assets/reactTopics.js";
 import { useState } from "react";
@@ -35,10 +36,16 @@ function App() {
       <PropsConcept empList={employeeList[1]} />
       <PropsConcept empList={employeeList[2]} /> */}
       <ul>
-      {employeeList.map((emp) => (
-        <PropsConcept {...emp} />
-      ))}
+        {EMP_LIST.map((emp) => (
+          <PropsConcept key={emp.name} {...emp} />
+        ))}
       </ul>
+      {TODO_TOPICS.map((todo) => (
+        <PropsConcept2 text={todo} />
+      ))}
+      <div>
+        <ul>{}</ul>
+      </div>
     </div>
   );
 }

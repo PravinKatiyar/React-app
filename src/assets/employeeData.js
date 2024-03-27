@@ -1,4 +1,4 @@
-export const employeeList =[
+export const EMP_LIST =[
     {
         name:"Pravin",
         Role:"Engineer",
@@ -8,20 +8,11 @@ export const employeeList =[
         name:"Rohan",
         Role:"Engineer",
         Company: "Capgemini"
-    },
-    {
-        name:"Nimish",
-        Role:"Engineer",
-        Company: "KPMG"
-    },
-    {
-        name:"Rohan",
-        Role:"Engineer",
-        Company: "Capgemini"
-    },
-    {
-        name:"Nimish",
-        Role:"Engineer",
-        Company: "KPMG"
     }
   ]
+
+export const TODO_TOPICS=[
+    'React',
+    'Java',
+    'Spring Boot'
+]
