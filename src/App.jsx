@@ -10,7 +10,6 @@ function App() {
   function handleSelect(selectedButton) {
     setSelectedTopic(selectedButton);
     console.log(selectedTopic);
-    //  alert('Button is Clicked!!  ' + selectedButton)
   }
 
   return (
@@ -35,6 +34,11 @@ function App() {
       {/* <PropsConcept empList={employeeList[0]} />
       <PropsConcept empList={employeeList[1]} />
       <PropsConcept empList={employeeList[2]} /> */}
+      <ul>
+      {employeeList.map((emp) => (
+        <PropsConcept {...emp} />
+      ))}
+      </ul>
     </div>
   );
 }

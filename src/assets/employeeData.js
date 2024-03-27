@@ -13,5 +13,15 @@ export const employeeList =[
         name:"Nimish",
         Role:"Engineer",
         Company: "KPMG"
+    },
+    {
+        name:"Rohan",
+        Role:"Engineer",
+        Company: "Capgemini"
+    },
+    {
+        name:"Nimish",
+        Role:"Engineer",
+        Company: "KPMG"
     }
   ]
