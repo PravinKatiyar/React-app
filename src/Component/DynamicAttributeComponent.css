@@ -1,0 +1,13 @@
+.topicContent h4  {
+    /* CSS styles for h4 tag inside .topicDesc */
+    font-size: 20px;
+    color: #a90606f3;
+  }
+  
+  .topicContent p  {
+    /* CSS styles for p tag inside .topicDesc */
+    font-size: 16px;
+    color: #66aa08;
+    font-weight: 100;
+    margin-top: 2px; /* Example margin, adjust as needed */
+  }

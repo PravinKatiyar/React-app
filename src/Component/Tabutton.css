@@ -1,22 +1,22 @@
-/* TabButton.css */
-
-.button {
+  .active {
     padding: 10px;
     margin: 10px;
-    border: 3px solid rgb(73, 145, 1); /* Thick border */
+    border: 3px solid rgb(255, 225, 0); /* Thick border */
     border-radius: 10px;
-    background-color: #007bff;
+    background-color: #d80000;
     color: #ffffff;
     font-size: 16px;
     cursor: default;
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    transition: border-color 0.5s ease; /* Smooth transition for border color */
   }
-  
-  .button:hover {
-    background-color: #0056b3;
+
+  .inactive {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #54162e;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: default;
+    transition: border-color 0.5s ease; /* Smooth transition for border color */
   }
-  
-  .button:active {
-    border-color: red; /* Change border color on click */
-  }
-  
